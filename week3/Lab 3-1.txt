@@ -1,0 +1,53 @@
+https://studylib.net/doc/8481553/lab-1
+
+
+Field	Type	Null	Key	Default	Extra
+REP_ID	char(2)	NO	PRI	NULL	
+FIRST_NAME	varchar(20)	YES		NULL	
+LAST_NAME	varchar(20)	YES		NULL	
+ADDRESS	varchar(20)	YES		NULL	
+CITY		varchar(15)	YES		NULL	
+STATE		char(2)	YES		NULL	
+POSTAL	char(5)	YES		NULL	
+CELL_PHONE	char(12)	YES		NULL	
+COMMISSION	decimal(7,2)	YES	NULL	
+RATE	decimal(3,2)	YES		NULL
+
+Field	Type	Null	Key	Default	Extra
+REP_ID	char(2)	NO	PRI	NULL	
+FIRST_NAME	varchar(20)	YES		NULL	
+LAST_NAME	varchar(20)	YES		NULL	
+ADDRESS	varchar(20)	YES		NULL	
+CITY		varchar(15)		YES	NULL	
+STATE		char(2)		YES	NULL	
+POSTAL	char(5)	YES		NULL	
+CELL_PHONE	char(12)	YES		NULL	
+COMMISION	decimal(7,2)	YES		NULL	
+RATE	decimal(3,2)	YES		NULL	
+
+
+drop table REP;
+
+
+CREATE TABLE REP
+(REP_ID char(2) Primary Key,
+FIRST_NAME varchar(20),
+LAST_NAME varchar(20) ,
+ADDRESS varchar(20),
+CITY varchar(15),
+STATE char(2),
+POSTAL char(5),
+CELL_PHONE char(12),
+COMMISSION decimal(7,2),
+RATE decimal(3,2)   );
+DESCRIBE REP;
+DESCRIBE SALES_REP;
+
+
+INSERT INTO REP 
+VALUES ('35','Fred','Kiser','427 Billings Dr.','Cody','WY','82414','307-555-6309','0.00','0.05');
+
+drop table REP;
+
+SHOW TABLES;
+
