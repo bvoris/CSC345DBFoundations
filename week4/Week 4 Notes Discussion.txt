@@ -1,0 +1,49 @@
+select <column name>
+from <list of tables and join operations>
+where <list of logical expressions true or false>
+order <by
+
+data types
+numeric
+data
+char
+varchar
+
+
+FacSalary * 1.1
+EnrGrade -1
+
+select * from faculty;
+SELECT <COLUMN> FROM <TABLE>;
+
+SELECT  FacForstName, FacLastName, FacSalary
+FROM Faculty
+WHERE FacSalary > 65000 AND FacRank = 'PROF';
+
+SELECT FacCity, FacState
+FROM Faculty
+
+SELECT DISTINCT FacCity, FacState
+FROM Faculty;
+
+DISTINCT elminates duplicate rows
+
+SELECT *
+FROM Offering
+WHERE CourseNo LIKE 'IS%';
+parentheses between AND OR
+
+SELECT REP_ID
+FROM CUSTOMER;
+
+If you are only getting REP_ID which is a CHAR its not going to be very useful. You get a list of numbers. You'd want additional informaiton from the CUSTOMER table.
+
+SELECT CUST_ID, FIRST_NAME, LAST_NAME, BALANCE
+FROM CUSTOMER
+WHERE BALANCE > '0.00';
+
+
+REFERENCE:
+https://www.coursera.org/lecture/database-management/select-statement-introduction-video-lecture-98EN1
+
+https://ng.cengage.com/static/nb/ui/evo/index.html?deploymentId=6018512453154102010738723059&eISBN=9780357419731&id=1557250806&nbId=3061654&snapshotId=3061654&
