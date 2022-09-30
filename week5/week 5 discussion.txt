@@ -1,0 +1,22 @@
+What are some business concerns you might have if you want to retrieve the data to determine the superior for each martin even if each martin does not have a superior and did not use the correct join?
+
+From a readability standpoint, what are the pros and cons of using table aliases when writing SQL? What are the issues when not using column aliases in the data that is displayed?
+
+What reason would you use a subquery and right join to return the data for the Inventory Report? What happens if you didn’t use the right join?
+
+Query first_name, last_name, super_id....
+super_id doesn't have any other column, row, key or value associations in any other table. This kind of feels like there is a missing table with a reference to the super_id.
+
+Aliasing does allow for simplified and shorter naming but can lead to some really terrible issues down the line. Inconsistent table aliasing, meaningless alias nakes, problems caused by inner queries, etc. There has to be consistent aliases used across code, with names that are meaningful or it will directly impact all inner queries.
+
+You'd subquery and right join the data in the inventory report so you could actually see products that are referenced and their names, descriptions, or quantities (which are human readable vs machine readble). The inventory table itself is not very useful as its just parts of the base and supply tables.
+Reference:
+https://www.sqlservercentral.com/blogs/random-thoughts-on-aliasing
+
+
+select column, t1.name, t2.name, columnb 
+from table as tx
+join table2 as t2
+on t1.id = t2.table1_id
+where conditions
+order by;
